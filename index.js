@@ -5,7 +5,6 @@ const cPassword = document.getElementById("confirmPassword");
 
 const nameError = document.getElementById("error");
 const passwordError = document.getElementById("password-error");
-const cpasswordErr = document.getElementById("confirm-password-error");
 
 const submitBtn = document.getElementById("submit-button");
 
@@ -31,15 +30,15 @@ submitBtn.addEventListener("click", () => {
 
     } if(password.value.length <= 6 ){
 
-        passwordError.innerHTML = `<p>Password must be longer than six characters.</p>`
+        passwordError.innerHTML = `<p class="password-error-msg">Password must be longer than six characters.</p>`
 
     } if((password.value && cPassword.value) && password.value.length > 10 ){
 
-        passwordError.innerHTML = `<p>Password must not be longer than ten characters.</p>`
+        passwordError.innerHTML = `<p class="password-error-msg">Password must not be longer than ten characters.</p>`
 
     } if( password.value.toLowerCase() === "password" ){
 
-        passwordError.innerHTML = `<p>Password cannot be ${password.value}.</p>`
+        passwordError.innerHTML = `<p class="password-error-msg">Password cannot be ${password.value}.</p>`
     } 
     
 }); 
