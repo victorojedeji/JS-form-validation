@@ -22,11 +22,11 @@ submitBtn.addEventListener("click", () => {
 
     } if(userName.value && (password.value == cPassword.value)) {
 
-        form.innerHTML = `<h5>Welcome back ${userName.value}!</h5>`;
+        form.innerHTML = `<h5 class="announcement">Welcome back ${userName.value}!</h5>`;
 
     }if (!userName.value && ((password.value == cPassword.value) || (password.value !== cPassword.value))){
 
-        nameError.innerHTML = "Name is required";
+        nameError.innerHTML = "NOTE: Name is required";
 
     } if((password.value.length > 0) && (password.value.length <= 6) ){
 
