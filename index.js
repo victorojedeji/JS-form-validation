@@ -1,8 +1,12 @@
+const form = document.getElementById("form");
 const userName = document.getElementById("name");
 const password = document.getElementById("password");
 const cPassword = document.getElementById("confirmPassword");
-const error = document.getElementById("error");
-const form = document.getElementById("form");
+
+const nameError = document.getElementById("error");
+const passwordError = document.getElementById("password-error");
+const cpasswordErr = document.getElementById("confirm-password-error");
+
 const submitBtn = document.getElementById("submit-button");
 
 
@@ -12,20 +16,30 @@ form.addEventListener("submit", (e) => {
 });
 
 submitBtn.addEventListener("click", () => {
-    const errorMsg = "Incorrect Password";
-    const user = userName.value;
-
 
     if(userName.value && (password.value !== cPassword.value)) {
 
-        error.innerHTML = `<p style = "color: red">${errorMsg}</p>`;
+        passwordError.innerHTML = `<p style = "color: red">Passwords do not match.</p>`;
 
     } if(userName.value && (password.value == cPassword.value)) {
 
-        form.innerHTML = `<h5>Welcome back ${user}!</h5>`;
+        form.innerHTML = `<h5>Welcome back ${userName.value}!</h5>`;
 
     }if (!userName.value && ((password.value == cPassword.value) || (password.value !== cPassword.value))){
 
-        error.innerHTML = "Name is required";
-    }
+        nameError.innerHTML = "Name is required";
+
+    } if(password.value.length <= 6 ){
+
+        passwordError.innerHTML = `<p>Password must be longer than six characters.</p>`
+
+    } if((password.value && cPassword.value) && password.value.length > 10 ){
+
+        passwordError.innerHTML = `<p>Password must not be longer than ten characters.</p>`
+
+    } if( password.value.toLowerCase() === "password" ){
+
+        passwordError.innerHTML = `<p>Password cannot be ${password.value}.</p>`
+    } 
+    
 }); 

@@ -15,15 +15,17 @@
 
             <label for="name">Name</label>
             <input type="text" id="name"
-            name="name">
+            name="name" required>
 
             <label for="password">Password</label>
             <input type="password" id="password"
             name="password">
 
             <label for="confirmPassword">Confirm Password</label>
+            <div id="confirm-password-error"></div>
             <input type="password" id="confirmPassword"
             name="confirmPassword">
+            <div id="password-error"></div>
 
             <button type="submit" id="submit-button">Login</button>
         </div>
