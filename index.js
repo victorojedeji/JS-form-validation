@@ -19,7 +19,6 @@ submitBtn.addEventListener("click", () => {
     if(userName.value && (password.value !== cPassword.value)) {
         error.innerHTML = `<p style = "color: red">${errorMsg}</p>`;
     } else {
-        form.innerHTML = `<h4>Welcome to our platform ${user}!</h4>`;
+        form.innerHTML = `<h5>Welcome back ${user}!</h5>`;
     }
 }); 
-
