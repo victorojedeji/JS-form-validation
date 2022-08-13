@@ -28,7 +28,7 @@ submitBtn.addEventListener("click", () => {
 
         nameError.innerHTML = "Name is required";
 
-    } if(password.value.length <= 6 ){
+    } if((password.value.length > 0) && (password.value.length <= 6) ){
 
         passwordError.innerHTML = `<p class="password-error-msg">Password must be longer than six characters.</p>`
 

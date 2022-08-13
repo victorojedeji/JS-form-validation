@@ -2,14 +2,62 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
     font-size: 1rem;
+    background: #272727;
+}
+
+#form {
+    width: 50%;
+    border: 1px solid white;
+    border-radius: .7rem;
+    margin: 8em auto;
+    padding: .5em;
+    max-width: 450px;
+    min-width: 300px;
+    background: #ffffff;
+}
+
+.form-wrapper {
+    width: 60%;
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
     display: block;
+    margin-bottom: 1em;
+    padding: .4em .4em;
+    border-radius: .5em;
+    outline: none;
+    border: 2px solid #b9b5b5;
+    background-color: #fafafa;
+}
+
+input:focus {
+    border: 2px solid black;
+    background-color: #ffffff;
+}
+
+label {
+    margin-bottom: .3em;
+}
+
+#submit-button {
+    padding: .4em;
+    margin-top: 2em;
+    width: 50%;
+    border-radius: .3em;
+    border: 2px solid #b9b5b5;
+}
+
+#submit-button:active {
+    border: 2px solid black;
+    background-color: #ffffff;
 }
 
 .password-error-msg {
