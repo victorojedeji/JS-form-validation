@@ -21,11 +21,21 @@ body{
     background: #ffffff;
 }
 
+.header {
+    text-align: center;
+}
+
 .form-wrapper {
     width: 60%;
     margin: 3em auto;
     display: flex;
     flex-direction: column;
+}
+
+.announcement {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 3em .3em;
 }
 
 input {
