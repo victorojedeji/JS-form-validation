@@ -21,21 +21,21 @@ submitBtn.addEventListener("click", () => {
     //     passwordError.innerHTML = `<p style = "color: red">Passwords do not match.</p>`;
 
     // } 
-
     
     if (!userName.value && (!password.value || password.value)){
 
         nameError.innerHTML = "NOTE: Name is required";
 
-    } if((password.value.length > 0) && (password.value.length <= 6) ){
+    } if((password.value.length >= 0) && (password.value.length <= 6) ){
 
-        passwordError.innerHTML = `<p class="password-error-msg">Password must be longer than six characters.</p>`
+       return passwordError.innerHTML = `<p class="password-error-msg">Password must be longer than six characters.</p>`
 
-    } if(password.value  && password.value.length > 10 ){
+    } if((password.value || userName.value)  && password.value.length > 10 ){
 
-        passwordError.innerHTML = `<p class="password-error-msg">Password must not be longer than ten characters.</p>`
+        return passwordError.innerHTML = `<p class="password-error-msg">Password must not be longer than ten characters.</p>`
 
-    }if(userName.value && password.value ) {
+    }
+    if(userName.value && password.value ) {
 
         formWrapper.innerHTML = `<h5 class="announcement">Login Successful!</h5>`;
 
